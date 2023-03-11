@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const mongoURI = 'mongodb+srv://dangtuan:0934010704@url-short.nd90j5s.mongodb.net/?retryWrites=true&w=majority'
+const mongoURI = 'mongodb+srv://dangtuan:dangtuan12@cluster0.xmpe6ec.mongodb.net/?retryWrites=true&w=majority'
 
 
 // KẾT NỐI DATABASE MONGO

@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6fdff7d-224a-4cc9-9419-8a7ac437202b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/LogDatabase.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/LogDatabase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setting/connectMongoDB.js" beforeDir="false" afterPath="$PROJECT_DIR$/setting/connectMongoDB.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +59,7 @@
       <workItem from="1678547467385" duration="106000" />
       <workItem from="1678547586991" duration="4364000" />
       <workItem from="1678553833088" duration="32000" />
-      <workItem from="1678553911631" duration="664000" />
+      <workItem from="1678553911631" duration="2857000" />
     </task>
     <servers />
   </component>

@@ -6,7 +6,6 @@ const LogDatabaseSchema = new mongoose.Schema({
     url: String,
     status: String,
     logtype: String,
-    geoIP: geoIP,
     responseTime: String,
     timestamp: {type: Date, default: Date.now}
 })

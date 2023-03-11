@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-// const {rootRouter} = require("./router");
+
 const {connectMongoDB} = require("./setting/connectMongoDB.js");
 const PORT = 5001
 
@@ -21,7 +21,10 @@ app.use(function (req, res, next) {
 connectMongoDB().then()
 
 
-// app.use("/api/v1", rootRouter)
+//using router
+
+
+
 ///////////// cài đặt kiểu json ép kiểu json
 app.use(express.json());
 
