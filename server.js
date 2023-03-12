@@ -2,7 +2,14 @@ const express = require('express');
 const app = express();
 
 const {connectMongoDB} = require("./setting/connectMongoDB.js");
-const PORT = 5001
+const PORT = 5000
+const {rootRouter} = require("./routers/routers");
+
+
+
+
+///////////// cài đặt kiểu json ép kiểu json
+app.use(express.json());
 
 ///////////// Add headers before the routes are defined
 app.use(function (req, res, next) {
@@ -20,13 +27,8 @@ app.use(function (req, res, next) {
 // Connected MongoDB
 connectMongoDB().then()
 
-
 //using router
-
-
-
-///////////// cài đặt kiểu json ép kiểu json
-app.use(express.json());
+app.use("/api", rootRouter)
 
 ///////////// App listing port
 app.listen(PORT, async () => {
