@@ -2,13 +2,14 @@ const { LogDatabase } = require("../models/LogDatabase");
 
 const postInfoBackUptoDB = async (req, res, next) => {
   try {
-    const { hostname, ipServer, pathBackup, capacityFile, status } = req.body;
+    const { hostname, ipServer, pathBackup, capacityFile, status, nameDatabase } = req.body;
 
     const logDatabase = new LogDatabase({
       ipServer: ipServer,
       hostName: hostname,
       pathBackup: pathBackup,
       status: status,
+      nameDatabase: nameDatabase,
       capacityFile: capacityFile,
       //   rangeTimeBackup: String,
     });
@@ -19,7 +20,7 @@ const postInfoBackUptoDB = async (req, res, next) => {
       logDatabase,
       message: "Tạo thành công dữ liệu",
     });
-  } catch (e) {}
+  } catch (e) { }
 };
 
 module.exports = {
