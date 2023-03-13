@@ -6,6 +6,7 @@ const LogDatabaseSchema = new mongoose.Schema({
   hostName: String,
   pathBackup: String,
   status: String,
+  osSystems: String,
   capacityFile: String,
   rangeTimeBackup: String,
   nameDatabase: String,

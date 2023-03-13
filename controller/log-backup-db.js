@@ -2,13 +2,14 @@ const { LogDatabase } = require("../models/LogDatabase");
 
 const postInfoBackUptoDB = async (req, res, next) => {
   try {
-    const { hostname, ipServer, pathBackup, capacityFile, status, nameDatabase } = req.body;
+    const { hostname, ipServer, pathBackup, capacityFile, status, nameDatabase, osSystems } = req.body;
 
     const logDatabase = new LogDatabase({
       ipServer: ipServer,
       hostName: hostname,
       pathBackup: pathBackup,
       status: status,
+      osSystems: osSystems,
       nameDatabase: nameDatabase,
       capacityFile: capacityFile,
       //   rangeTimeBackup: String,
