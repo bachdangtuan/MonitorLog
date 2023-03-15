@@ -3,7 +3,7 @@ const moment = require("moment");
 
 const postInfoBackUptoDB = async (req, res, next) => {
   const dateBackup = moment().format("DD/MM/YYYY");
-  const timeBackup = moment().format("hh:mm:ss");
+  const timeBackup = moment().format("HH:mm:ss");
   try {
     const {
       hostname,
