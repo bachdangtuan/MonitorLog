@@ -8,7 +8,8 @@ const LogDatabaseSchema = new mongoose.Schema({
   status: String,
   osSystems: String,
   capacityFile: String,
-  rangeTimeBackup: String,
+  DateBackup: String,
+  TimeBackup: String,
   nameDatabase: String,
   status: String,
 });

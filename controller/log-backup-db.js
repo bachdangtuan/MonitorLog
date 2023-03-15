@@ -1,6 +1,9 @@
 const { LogDatabase } = require("../models/LogDatabase");
+const moment = require("moment");
 
 const postInfoBackUptoDB = async (req, res, next) => {
+  const dateBackup = moment().format("DD/MM/YYYY");
+  const timeBackup = moment().format("hh:mm:ss");
   try {
     const {
       hostname,
@@ -20,7 +23,8 @@ const postInfoBackUptoDB = async (req, res, next) => {
       osSystems: osSystems,
       nameDatabase: nameDatabase,
       capacityFile: capacityFile,
-      //   rangeTimeBackup: String,
+      DateBackup: dateBackup,
+      TimeBackup: timeBackup,
     });
     console.log(logDatabase);
     logDatabase.save().then();
