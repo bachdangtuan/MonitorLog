@@ -52,6 +52,7 @@ const getTotalLogBackupDB = async (req, res, next) => {
     }
 
     const logDatabase = await LogDatabase.find(filter)
+      .sort({ _id: -1 }) // sắp xếp mới nhất
       .skip((page - 1) * limit)
       .limit(limit);
 
