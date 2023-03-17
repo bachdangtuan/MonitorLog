@@ -39,20 +39,55 @@ const postInfoBackUptoDB = async (req, res, next) => {
 const getTotalLogBackupDB = async (req, res, next) => {
   const limit = parseInt(req.query.limit) || 10;
   const page = parseInt(req.query.page) || 1;
+  const hostName = req.query.hostName || "";
+  const nameDatabase = req.query.nameDatabase || "";
 
   try {
-    const logDatabase = await LogDatabase.find();
+    const filter = {};
+    if (hostName) {
+      filter.hostName = hostName;
+    }
+    if (nameDatabase) {
+      filter.nameDatabase = nameDatabase;
+    }
+
+    const logDatabase = await LogDatabase.find(filter)
+      .skip((page - 1) * limit)
+      .limit(limit);
+
+    const count = await LogDatabase.countDocuments(filter);
 
     res.status(200).send({
-      message: "Danh sách log",
-      logDatabase,
+      message: "Lấy thành công",
+      thisPage: page,
+      limit: limit,
+      data: logDatabase,
+      totalItems: count,
     });
   } catch (e) {
     res.status(500).send({
-      message: "Server error !!",
+      message: "Lỗi server !!",
     });
   }
 };
+
+// const getTotalLogBackupDB = async (req, res, next) => {
+//   const limit = parseInt(req.query.limit) || 10;
+//   const page = parseInt(req.query.page) || 1;
+
+//   try {
+//     const logDatabase = await LogDatabase.find();
+
+//     res.status(200).send({
+//       message: "Danh sách log",
+//       logDatabase,
+//     });
+//   } catch (e) {
+//     res.status(500).send({
+//       message: "Server error !!",
+//     });
+//   }
+// };
 
 module.exports = {
   postInfoBackUptoDB,
