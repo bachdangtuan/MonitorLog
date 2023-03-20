@@ -1,5 +1,5 @@
 const { LogDatabase } = require("../models/LogDatabase");
-const moment = require("moment");
+// const moment = require("moment");
 
 const postInfoBackUptoDB = async (req, res, next) => {
   const dateBackup = moment().format("DD/MM/YYYY");
@@ -41,7 +41,9 @@ const getTotalLogBackupDB = async (req, res, next) => {
   const page = parseInt(req.query.page) || 1;
   const hostName = req.query.hostName || "";
   const nameDatabase = req.query.nameDatabase || "";
+  const status = req.query.status || "";
 
+  console.log(status);
   try {
     const filter = {};
     if (hostName) {
@@ -49,6 +51,9 @@ const getTotalLogBackupDB = async (req, res, next) => {
     }
     if (nameDatabase) {
       filter.nameDatabase = nameDatabase;
+    }
+    if (status) {
+      filter.status = status;
     }
 
     const logDatabase = await LogDatabase.find(filter)
