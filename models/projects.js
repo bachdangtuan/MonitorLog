@@ -1,0 +1,41 @@
+"use strict";
+const { Model } = require("sequelize");
+module.exports = (sequelize, DataTypes) => {
+  class Projects extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    // static associate({PhysicalMachine}) {
+    //     // define association here 1 station thì có nhiều chuyến đi
+    //     this.belongsTo(PhysicalMachine, {foreignKey: 'classPhysicalMachine', as: 'classPhysicalMachine'});
+    // }
+  }
+
+  Projects.init(
+    {
+      nameCompany: {
+        allowNull: false,
+        type: DataTypes.STRING,
+      },
+      introduction: {
+        allowNull: false,
+        type: DataTypes.STRING,
+      },
+      phoneNumber: {
+        allowNull: false,
+        type: DataTypes.STRING,
+      },
+      address: {
+        allowNull: false,
+        type: DataTypes.STRING,
+      },
+    },
+    {
+      sequelize,
+      modelName: "Projects",
+    }
+  );
+  return Projects;
+};

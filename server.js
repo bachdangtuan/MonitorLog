@@ -4,8 +4,7 @@ const app = express();
 const {connectMongoDB} = require("./setting/connectMongoDB.js");
 const PORT = 5000
 const {rootRouter} = require("./routers/routers");
-
-
+const {sequelize} = require('./models');
 
 
 ///////////// cài đặt kiểu json ép kiểu json
@@ -32,5 +31,11 @@ app.use("/api", rootRouter)
 
 ///////////// App listing port
 app.listen(PORT, async () => {
-    console.log(`Server khoi tao port ${PORT} http://localhost:${PORT}`)
+    try {
+        await sequelize.authenticate();
+        console.log('######### Kết nối tới máy chủ Mysql server thành công.');
+    } catch (error) {
+        console.error('Unable to connect to the database:', error);
+    }
+    console.log(`######### Server khoi tao port ${PORT} http://localhost:${PORT}`)
 })

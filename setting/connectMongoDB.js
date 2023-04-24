@@ -13,7 +13,7 @@ const connectMongoDB = async () => {
         useUnifiedTopology: true
     })
         .then(() => {
-            console.log(`Kết nối thành công tới mongoDB Atlas ${mongoURI} `)
+            console.log(`######### Kết nối thành công tới mongoDB Atlas ${mongoURI} `)
         })
         .catch(err => {
             console.log(err)
