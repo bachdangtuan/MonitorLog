@@ -1,4 +1,4 @@
-const { LogDatabase } = require("../models/LogDatabase");
+const { LogDatabase } = require("../databackup-model/LogDatabase");
 const moment = require("moment");
 
 const postInfoBackUptoDB = async (req, res, next) => {
