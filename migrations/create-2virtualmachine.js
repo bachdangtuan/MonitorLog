@@ -24,13 +24,6 @@ module.exports = {
       disk: {
         type: Sequelize.STRING,
       },
-      serviceContainerId: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: "ServiceContainer",
-          key: "id",
-        },
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

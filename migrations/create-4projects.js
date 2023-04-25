@@ -19,16 +19,11 @@ module.exports = {
                 type: Sequelize.STRING,
             },
             introduction: {
+                type: Sequelize.TEXT,
+            },
+            email: {
                 type: Sequelize.STRING,
             },
-            physicalMachineId: {
-                type: Sequelize.INTEGER,
-                references: {
-                    model: 'PhysicalMachine',
-                    key: "id",
-                }
-            },
-
             createdAt: {
                 allowNull: false,
                 type: Sequelize.DATE,

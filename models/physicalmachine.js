@@ -9,30 +9,30 @@ module.exports = (sequelize, DataTypes) => {
          */
         static associate({Projects, VirtualMachine}) {
             // define association here  máy vật lý thì có nhiều dự án
-            this.hasMany(Projects, {
-                foreignKey: "physicalMachineId",
-                as: "phymanchine",
-            });
-
-            this.belongsTo(VirtualMachine, {foreignKey: 'virtualMachineId', as: 'virmanchine'});
+            // this.hasMany(Projects, {
+            //     foreignKey: "physicalMachineId",
+            //     as: "phymanchine",
+            // });
+            //
+            // this.belongsTo(VirtualMachine, {foreignKey: 'virtualMachineId', as: 'virmanchine'});
         }
     }
 
     PhysicalMachine.init(
         {
+            namePhysicalMachine: {
+                allowNull: false,
+                type: DataTypes.STRING,
+            },
             ipadress: {
                 allowNull: false,
                 type: DataTypes.STRING,
             },
+            type_machine: {
+                allowNull: false,
+                type: DataTypes.STRING,
+            },
             service: {
-                allowNull: false,
-                type: DataTypes.STRING,
-            },
-            belongtoCompany: {
-                allowNull: false,
-                type: DataTypes.STRING,
-            },
-            provider: {
                 allowNull: false,
                 type: DataTypes.STRING,
             },
@@ -45,10 +45,6 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.STRING,
             },
             disk: {
-                allowNull: false,
-                type: DataTypes.STRING,
-            },
-            type_machine: {
                 allowNull: false,
                 type: DataTypes.STRING,
             },

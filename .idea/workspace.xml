@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6fdff7d-224a-4cc9-9419-8a7ac437202b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/migrations/create-3physicalmachine.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/create-4projects.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/create-3physicalmachine.js" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/create-3physicalmachine.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/create-4projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/create-4projects.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/migrations/create-physicalmachine.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/migrations/create-projects.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/migrations/create-servicecontainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/create-1servicecontainer.js" afterDir="false" />
@@ -60,6 +60,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\tuanbd\OneDrive\Máy tính\Backend-Monitor-Backup\seeders" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

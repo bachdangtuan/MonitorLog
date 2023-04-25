@@ -9,20 +9,16 @@ module.exports = {
                 primaryKey: true,
                 type: Sequelize.INTEGER,
             },
-            virtualMachineId: {
-                type: Sequelize.INTEGER,
-                references: {
-                    model: 'VirtualMachine',
-                    key: "id",
-                }
+            namePhysicalMachine: {
+                type: Sequelize.STRING,
             },
             ipadress: {
                 type: Sequelize.STRING,
             },
-            service: {
+            type_machine: {
                 type: Sequelize.STRING,
             },
-            belongtoCompany: {
+            service: {
                 type: Sequelize.STRING,
             },
             ram: {
@@ -32,9 +28,6 @@ module.exports = {
                 type: Sequelize.STRING,
             },
             disk: {
-                type: Sequelize.STRING,
-            },
-            type_machine: {
                 type: Sequelize.STRING,
             },
             createdAt: {
