@@ -2,7 +2,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
     async up(queryInterface, Sequelize) {
-        await queryInterface.createTable("ServiceContainer", {
+        await queryInterface.createTable("ServiceContainers", {
             id: {
                 allowNull: false,
                 autoIncrement: true,
@@ -24,7 +24,7 @@ module.exports = {
             belongtoVirtualMachine: {
                 type: Sequelize.INTEGER,
                 references: {
-                    model: 'VirtualMachine',
+                    model: 'VirtualMachines',
                     key: "id",
                 }
             },

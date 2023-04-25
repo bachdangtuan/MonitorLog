@@ -1,4 +1,4 @@
-const {Projects, PhysicalMachine} = require('../models')
+const {Projects, PhysicalMachines} = require("../models");
 
 // Get All project
 
@@ -8,23 +8,18 @@ const getAllProject = async (req, res) => {
     let optionQueryDB = {
         include: [
             {
-                model: PhysicalMachine,
+                model: PhysicalMachines,
                 as: "belongCompany",
             },
-
         ],
-        attributes: {exclude: ['createdAt', 'updatedAt']}
-    }
-
+        attributes: {exclude: ["createdAt", "updatedAt"]},
+    };
 
     try {
-        const projectsList = await Projects.findAll(optionQueryDB)
+        const projectsList = await Projects.findAll(optionQueryDB);
 
         console.log(projectsList);
-        // res.status(200).send({
-        //     projectsList
-        // })
-
+        res.status(200).send(projectsList);
     } catch (err) {
         res.status(500).send({
             message: "Lỗi server !!",

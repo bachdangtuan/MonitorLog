@@ -8,7 +8,7 @@ module.exports = {
          *
          * Example:
          */
-        await queryInterface.bulkInsert('physicalmachine', [
+        await queryInterface.bulkInsert('physicalmachines', [
 
             {
                 ipadress: '10.0.0.8',

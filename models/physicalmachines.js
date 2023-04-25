@@ -1,34 +1,46 @@
 "use strict";
 const {Model} = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
-    class VirtualMachine extends Model {
+    class PhysicalMachines extends Model {
         /**
          * Helper method for defining associations.
          * This method is not a part of Sequelize lifecycle.
          * The `models/index` file will call this method automatically.
          */
-        static associate({PhysicalMachine, ServiceContainer}) {
-            // define association here 1 station thì có nhiều chuyến đi
-            this.hasMany(ServiceContainer, {foreignKey: 'belongtoVirtualMachine', as: 'belongVirtualMachine'});
-            this.belongsTo(PhysicalMachine, {foreignKey: 'belongtoPhysicalMachine', as: 'belongPhysicalMachine'});
+        static associate({Projects, VirtualMachines}) {
+            // define association here  máy vật lý thì có nhiều dự án
+            this.hasMany(VirtualMachines, {
+                foreignKey: "belongtoPhysicalMachine",
+                as: "belongPhysicalMachine",
+            });
+            //
+            this.belongsTo(Projects, {foreignKey: 'belongtoCompany', as: 'belongCompany'});
         }
     }
 
-    VirtualMachine.init(
+    PhysicalMachines.init(
         {
-            nameVirtualMachine: {
+            namePhysicalMachine: {
                 allowNull: false,
                 type: DataTypes.STRING,
             },
-            ipaddress: {
+            ipadress: {
                 allowNull: false,
                 type: DataTypes.STRING,
             },
-            cpu: {
+            type_machine: {
+                allowNull: false,
+                type: DataTypes.STRING,
+            },
+            service: {
                 allowNull: false,
                 type: DataTypes.STRING,
             },
             ram: {
+                allowNull: false,
+                type: DataTypes.STRING,
+            },
+            cpu: {
                 allowNull: false,
                 type: DataTypes.STRING,
             },
@@ -39,8 +51,8 @@ module.exports = (sequelize, DataTypes) => {
         },
         {
             sequelize,
-            modelName: "VirtualMachine",
+            modelName: "PhysicalMachines",
         }
     );
-    return VirtualMachine;
+    return PhysicalMachines;
 };
