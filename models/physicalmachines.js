@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
                 as: "belongPhysicalMachine",
             });
             //
-            this.belongsTo(Projects, {foreignKey: 'belongtoCompany', as: 'belongCompany'});
+            this.belongsTo(Projects, {foreignKey: 'belongtoCompany', as: 'listPhysicalMachine'});
         }
     }
 

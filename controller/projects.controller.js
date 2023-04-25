@@ -9,7 +9,7 @@ const getAllProject = async (req, res) => {
         include: [
             {
                 model: PhysicalMachines,
-                as: "belongCompany",
+                as: "listPhysicalMachine",
             },
         ],
         attributes: {exclude: ["createdAt", "updatedAt"]},
