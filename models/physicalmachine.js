@@ -9,12 +9,12 @@ module.exports = (sequelize, DataTypes) => {
          */
         static associate({Projects, VirtualMachine}) {
             // define association here  máy vật lý thì có nhiều dự án
-            // this.hasMany(Projects, {
-            //     foreignKey: "physicalMachineId",
-            //     as: "phymanchine",
-            // });
+            this.hasMany(VirtualMachine, {
+                foreignKey: "belongtoPhysicalMachine",
+                as: "belongPhysicalMachine",
+            });
             //
-            // this.belongsTo(VirtualMachine, {foreignKey: 'virtualMachineId', as: 'virmanchine'});
+            this.belongsTo(Projects, {foreignKey: 'belongtoCompany', as: 'belongCompany'});
         }
     }
 

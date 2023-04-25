@@ -2,27 +2,40 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
     async up(queryInterface, Sequelize) {
-        await queryInterface.createTable("Projects", {
+        await queryInterface.createTable("PhysicalMachine", {
             id: {
                 allowNull: false,
                 autoIncrement: true,
                 primaryKey: true,
                 type: Sequelize.INTEGER,
             },
-            nameCompany: {
+            namePhysicalMachine: {
                 type: Sequelize.STRING,
             },
-            address: {
+            ipadress: {
                 type: Sequelize.STRING,
             },
-            phoneNumber: {
+            type_machine: {
                 type: Sequelize.STRING,
             },
-            introduction: {
-                type: Sequelize.TEXT,
-            },
-            email: {
+            service: {
                 type: Sequelize.STRING,
+            },
+            ram: {
+                type: Sequelize.STRING,
+            },
+            cpu: {
+                type: Sequelize.STRING,
+            },
+            disk: {
+                type: Sequelize.STRING,
+            },
+            belongtoCompany: {
+                type: Sequelize.INTEGER,
+                references: {
+                    model: 'Projects',
+                    key: "id",
+                }
             },
             createdAt: {
                 allowNull: false,
@@ -35,6 +48,6 @@ module.exports = {
         });
     },
     async down(queryInterface, Sequelize) {
-        await queryInterface.dropTable("Projects");
+        await queryInterface.dropTable("PhysicalMachine");
     },
 };

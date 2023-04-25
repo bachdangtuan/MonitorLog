@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate({VirtualMachine}) {
         // define association here 1 station thì có nhiều chuyến đi
-        this.hasMany(VirtualMachine, {foreignKey: 'serviceContainerId', as: 'servicecontainer'});
+        this.belongsTo(VirtualMachine, {foreignKey: 'belongtoVirtualMachine', as: 'belongVirtualMachine'});
     }
   }
 
@@ -31,13 +31,6 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         type: DataTypes.STRING,
       },
-    //   classPhysicalMachine: {
-    //     type: Sequelize.INTEGER,
-    //     references: {
-    //       model: "Stations",
-    //       key: "id",
-    //     },
-    //   },
     },
     {
       sequelize,
