@@ -1,49 +1,273 @@
-'use strict';
+"use strict";
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
-    async up(queryInterface, Sequelize) {
-        /**
-         * Add seed commands here.
-         *
-         * Example:
-         */
-        await queryInterface.bulkInsert('physicalmachines', [
+  async up(queryInterface, Sequelize) {
+    /**
+     * Add seed commands here.
+     *
+     * Example:
+     */
+    await queryInterface.bulkInsert(
+      "physicalmachines",
+      [
+        {
+          ipadress: "10.0.0.8",
+          type_machine: "dell",
+          namePhysicalMachine: "PowerEdge R710",
+          cpu: "12 CPUs x 2.261 Ghz Intel(R) Xeon(R) CPU K5640 @ 2.27Ghz ",
+          ram: "64Gb",
+          service: "VM ESXi v6",
+          disk: "2Tb (local)",
+          belongtoCompany: 1,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          ipadress: "10.0.0.89",
+          type_machine: "dell",
+          namePhysicalMachine: "PowerEdge R720",
+          cpu: "24 CPUs x Intel(R) Xeon(R) CPU E5-2969 v2 @ 2.50Ghz",
+          ram: "256Gb",
+          service: "VM ESXi v6",
+          disk: "1Tb (local)",
+          belongtoCompany: 1,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          ipadress: "10.0.0.92",
+          type_machine: "dell",
+          namePhysicalMachine: "PowerEdge R630",
+          cpu: "16 CPUs x Intel(R) Xeon(R) CPU E5-2630L v3 @ 1.80GHz",
+          ram: "512Gb",
+          service: "VM ESXi v7",
+          disk: "6Tb (local)",
+          belongtoCompany: 1,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          ipadress: "10.0.0.119",
+          type_machine: "dell",
+          namePhysicalMachine: "PowerEdge R720",
+          cpu: "24 CPUs x Intel(R) Xeon(R) CPU E5-2696 v2 @ 2.50GHz",
+          ram: "128Gb",
+          service: "VM ESXi v7",
+          disk: "10Tb (local)",
+          belongtoCompany: 1,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          ipadress: "10.0.0.248",
+          type_machine: "dell",
+          namePhysicalMachine: "PowerEdge R720",
+          cpu: "12 CPUs x Intel(R) Xeon(R) CPU E5-2620 v2 @ 2.10GHz",
+          ram: "256 Gb",
+          service: "VM ESXi v6",
+          disk: "2Tb (local)",
+          belongtoCompany: 1,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          ipadress: "10.0.0.250",
+          type_machine: "hpe",
+          namePhysicalMachine: "ProLiant DL 380 Gen9",
+          cpu: "20 CPUs x 2.397 Ghz Intel(R) Xeon(R) CPU E5-2640 v4 @ 2.4Ghz",
+          ram: "256 Gb",
+          service: "VM ESXi v6",
+          disk: "4Tb (local)",
+          belongtoCompany: 1,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          ipadress: "10.0.0.252",
+          type_machine: "hpe",
+          namePhysicalMachine: "ProLiant ML10 v2",
+          cpu: "4 CPUs x 3.1Ghz Intel(R) Xeon(R) CPU E5-1220 v3 @ 3.1Ghz",
+          ram: "32 Gb",
+          service: "VM ESXi v6",
+          disk: "2Tb (local)",
+          belongtoCompany: 1,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          ipadress: "10.0.0.254",
+          type_machine: "dell",
+          namePhysicalMachine: "PowerEdge R720",
+          cpu: "12 CPUs x Intel(R) Xeon(R) CPU E5-2620 v2 @ 2.10GHz",
+          ram: "256 Gb",
+          service: "VM ESXi v6",
+          disk: "3Tb (local)",
+          belongtoCompany: 1,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
 
-            {
-                ipadress: '10.0.0.8',
-                type_machine: 'dell',
-                namePhysicalMachine: 'PowerEdge R710',
-                cpu: '12 CPUs x 2.261 Ghz Intel(R) Xeon(R) CPU K5640 @ 2.27Ghz ',
-                ram: '64Gb',
-                service: 'VM ESXi v6',
-                disk: '2Tb (local)',
-                belongtoCompany: 1,
-                createdAt: new Date(),
-                updatedAt: new Date()
-            },
-            {
-                ipadress: '10.0.0.8',
-                type_machine: 'dell',
-                namePhysicalMachine: 'PowerEdge R710',
-                cpu: '12 CPUs x 2.261 Ghz Intel(R) Xeon(R) CPU K5640 @ 2.27Ghz ',
-                ram: '64Gb',
-                service: 'VM ESXi v6',
-                disk: '2Tb (local)',
-                belongtoCompany: 1,
-                createdAt: new Date(),
-                updatedAt: new Date()
-            },
-        ], {});
-    },
+        // Máy viện E
+        {
+          ipadress: "192.168.0.70",
+          type_machine: "dell",
+          namePhysicalMachine: "PowerEdge R740",
+          cpu: "32 CPUs x Intel(R) Xeon(R) Silver 4216 CPU @ 2.10GHz",
+          ram: "256 Gb",
+          service: "VMware ESXi v7",
+          disk: "6Tb (local)",
+          belongtoCompany: 2,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          ipadress: "192.168.0.254",
+          type_machine: "dell",
+          namePhysicalMachine: "PowerEdge R720",
+          cpu: "16 CPUs x Intel(R) Xeon(R) CPU E5-2665 v2 @ 2.50Ghz",
+          ram: "64 Gb",
+          service: "VMware ESXi v6",
+          disk: "1Tb (local)",
+          belongtoCompany: 2,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        // Mediplus
+        {
+          ipadress: "10.3.0.91",
+          type_machine: "dell",
+          namePhysicalMachine: "PowerEdge R740",
+          cpu: "10 CPUs x Intel(R) Xeon(R) Silver 4210R CPU @ 2.40GHz",
+          ram: "96 Gb",
+          service: "VMware ESXi v6.5.0",
+          disk: "3Tb (local)",
+          belongtoCompany: 3,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          ipadress: "10.3.0.92",
+          type_machine: "dell",
+          namePhysicalMachine: "PowerEdge R740",
+          cpu: "10 CPUs x Intel(R) Xeon(R) Silver 4210R CPU @ 2.40GHz",
+          ram: "96 Gb",
+          service: "VMware ESXi v6.5.0",
+          disk: "3Tb (local)",
+          belongtoCompany: 3,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          ipadress: "10.3.0.93",
+          type_machine: "dell",
+          namePhysicalMachine: "PowerEdge R740",
+          cpu: "10 CPUs x Intel(R) Xeon(R) Silver 4210R CPU @ 2.40GHz",
+          ram: "96 Gb",
+          service: "VMware ESXi v6.5.0",
+          disk: "3Tb (local)",
+          belongtoCompany: 3,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          ipadress: "10.3.0.94",
+          type_machine: "dell",
+          namePhysicalMachine: "PowerEdge R740",
+          cpu: "10 CPUs x Intel(R) Xeon(R) Silver 4210R CPU @ 2.40GHz",
+          ram: "96 Gb",
+          service: "VMware ESXi v6.5.0",
+          disk: "3Tb (local)",
+          belongtoCompany: 3,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        // Bệnh viện xanh phôn
+        {
+          ipadress: "172.16.16.10",
+          type_machine: "dell",
+          namePhysicalMachine: "PowerEdge R740",
+          cpu: "40 CPUs x Intel(R) Xeon(R) Gold 5218R CPU @ 2.10GHz",
+          ram: "256 Gb",
+          service: "VMware ESXi v6.7.0",
+          disk: "Mount total 32 Tb",
+          belongtoCompany: 4,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          ipadress: "172.16.16.11",
+          type_machine: "dell",
+          namePhysicalMachine: "PowerEdge R740",
+          cpu: "40 CPUs x Intel(R) Xeon(R) Gold 5218R CPU @ 2.10GHz",
+          ram: "256 Gb",
+          service: "VMware ESXi v6.7.0",
+          disk: "Mount total 32 Tb",
+          belongtoCompany: 4,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          ipadress: "172.16.16.12",
+          type_machine: "dell",
+          namePhysicalMachine: "PowerEdge R740",
+          cpu: "10 CPUs x Intel(R) Xeon(R) Silver 4210R CPU @ 2.40GHz",
+          ram: "96 Gb",
+          service: "VMware ESXi v6.7.0",
+          disk: "Mount total 32 Tb",
+          belongtoCompany: 4,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        // Đa khoa thánh hóa
+        {
+          ipadress: "172.16.16.10",
+          type_machine: "dell",
+          namePhysicalMachine: "PowerEdge R740",
+          cpu: "40 CPUs x Intel(R) Xeon(R) Gold 5218R CPU @ 2.10GHz",
+          ram: "256 Gb",
+          service: "VMware ESXi v6.7.0",
+          disk: "Mount total 32 Tb",
+          belongtoCompany: 8,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          ipadress: "172.16.16.11",
+          type_machine: "dell",
+          namePhysicalMachine: "PowerEdge R740",
+          cpu: "40 CPUs x Intel(R) Xeon(R) Gold 5218R CPU @ 2.10GHz",
+          ram: "256 Gb",
+          service: "VMware ESXi v6.7.0",
+          disk: "Mount total 32 Tb",
+          belongtoCompany: 8,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          ipadress: "172.16.16.12",
+          type_machine: "dell",
+          namePhysicalMachine: "PowerEdge R740",
+          cpu: "10 CPUs x Intel(R) Xeon(R) Silver 4210R CPU @ 2.40GHz",
+          ram: "96 Gb",
+          service: "VMware ESXi v6.7.0",
+          disk: "Mount total 32 Tb",
+          belongtoCompany: 8,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+      ],
+      {}
+    );
+  },
 
-    async down(queryInterface, Sequelize) {
-        /**
-         * Add commands to revert seed here.
-         *
-         * Example:
-         * await queryInterface.bulkDelete('People', null, {});
-         */
-        await queryInterface.bulkDelete('users', null, {});
-    }
+  async down(queryInterface, Sequelize) {
+    /**
+     * Add commands to revert seed here.
+     *
+     * Example:
+     * await queryInterface.bulkDelete('People', null, {});
+     */
+    await queryInterface.bulkDelete("users", null, {});
+  },
 };

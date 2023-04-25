@@ -10,6 +10,7 @@ const getAllProject = async (req, res) => {
             {
                 model: PhysicalMachines,
                 as: "listPhysicalMachine",
+                attributes: {exclude: ["createdAt", "updatedAt"]},
             },
         ],
         attributes: {exclude: ["createdAt", "updatedAt"]},
