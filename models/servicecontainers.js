@@ -8,7 +8,6 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate({VirtualMachines}) {
-        // define association here 1 station thì có nhiều chuyến đi
         this.belongsTo(VirtualMachines, {foreignKey: 'belongtoVirtualMachine', as: 'belongVirtualMachine'});
     }
   }

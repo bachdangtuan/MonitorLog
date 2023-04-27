@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
         static associate({PhysicalMachines, ServiceContainers}) {
             // define association here 1 station thì có nhiều chuyến đi
             this.hasMany(ServiceContainers, {foreignKey: 'belongtoVirtualMachine', as: 'belongVirtualMachine'});
-            this.belongsTo(PhysicalMachines, {foreignKey: 'belongtoPhysicalMachine', as: 'belongPhysicalMachine'});
+            this.belongsTo(PhysicalMachines, {foreignKey: 'belongtoPhysicalMachine', as: 'listVirtualMachine'});
         }
     }
 

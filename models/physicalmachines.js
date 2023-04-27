@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
             // define association here  máy vật lý thì có nhiều dự án
             this.hasMany(VirtualMachines, {
                 foreignKey: "belongtoPhysicalMachine",
-                as: "belongPhysicalMachine",
+                as: "listVirtualMachine",
             });
             //
             this.belongsTo(Projects, {foreignKey: 'belongtoCompany', as: 'listPhysicalMachine'});
