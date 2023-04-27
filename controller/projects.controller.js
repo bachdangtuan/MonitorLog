@@ -1,4 +1,4 @@
-const {Projects, PhysicalMachines, VirtualMachines} = require("../models");
+const {Projects, PhysicalMachines, VirtualMachines, ServiceContainers} = require("../models");
 
 // Get All project
 
@@ -13,7 +13,14 @@ let optionQueryDB = {
                     model: VirtualMachines,
                     as: "listVirtualMachine",
                     attributes: {exclude: ["createdAt", "updatedAt"]},
-
+                    // include: [
+                    //     {
+                    //         model: ServiceContainers,
+                    //         as: "belongVirtualMachine",
+                    //         attributes: {exclude: ["createdAt", "updatedAt"]},
+                    //
+                    //     },
+                    // ],
                 },
             ],
         },
