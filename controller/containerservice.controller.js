@@ -1,10 +1,10 @@
-const {VirtualMachines} = require("../models");
+const {ServiceContainers} = require("../models");
 const moment = require('moment');
 
 // Thiết lập múi giờ thành UTC+7
 moment.tz.setDefault('Asia/Ho_Chi_Minh');
 
-const createVirtualMachine = async (req, res) => {
+const createContainerService = async (req, res) => {
     console.log('req', req.body)
     // const dateBackup = moment().format("DD/MM/YYYY");
     // const timeBackup = moment().format("HH:mm:ss");
@@ -12,24 +12,24 @@ const createVirtualMachine = async (req, res) => {
 
     const {
         ipaddress,
-        nameVirtualMachine,
+        nameServiceContainer,
         cpu,
         ram,
         disk,
-        belongtoPhysicalMachine,
+        belongtoVirtualMachine,
 
     } = req.body
     try {
-        const newVirtualMachine = await VirtualMachines.create({
+        const newContainerService = await ServiceContainers.create({
             ipaddress,
-            nameVirtualMachine,
+            nameServiceContainer,
             cpu,
             ram,
             disk,
-            belongtoPhysicalMachine,
+            belongtoVirtualMachine,
             createdAt: moment().tz('Asia/Ho_Chi_Minh').format('YYYY-MM-DDTHH:mm:ss.SSS[Z]'),
         })
-        res.status(200).send(newVirtualMachine)
+        res.status(200).send(newContainerService)
     } catch (err) {
         console.log(err);
     }
@@ -37,5 +37,5 @@ const createVirtualMachine = async (req, res) => {
 }
 
 module.exports = {
-    createVirtualMachine
+    createContainerService
 };
