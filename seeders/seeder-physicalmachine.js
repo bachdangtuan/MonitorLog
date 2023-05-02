@@ -9,7 +9,7 @@ module.exports = {
      * Example:
      */
     await queryInterface.bulkInsert(
-      "physicalmachines",
+      "PhysicalMachines",
       [
         {
           ipadress: "10.0.0.8",
