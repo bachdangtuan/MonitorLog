@@ -32,7 +32,15 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
                 type: DataTypes.STRING,
             },
+            usedram: {
+                allowNull: false,
+                type: DataTypes.STRING,
+            },
             disk: {
+                allowNull: false,
+                type: DataTypes.STRING,
+            },
+            diskused: {
                 allowNull: false,
                 type: DataTypes.STRING,
             },

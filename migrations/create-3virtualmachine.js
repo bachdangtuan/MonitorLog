@@ -21,7 +21,13 @@ module.exports = {
             ram: {
                 type: Sequelize.STRING,
             },
+            usedram: {
+                type: Sequelize.STRING,
+            },
             disk: {
+                type: Sequelize.STRING,
+            },
+            diskused: {
                 type: Sequelize.STRING,
             },
             belongtoPhysicalMachine: {

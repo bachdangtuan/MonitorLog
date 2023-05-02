@@ -12,6 +12,7 @@ module.exports = {
       "Projects",
       [
         {
+          // 1
           nameCompany: "Isofh Company",
           avatar: "../assets/images/benhvien/isofh.png",
           introduction:
@@ -23,6 +24,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
+          // 2
           nameCompany: "Bệnh viện E",
           avatar: "../assets/images/benhvien/viene.png",
           introduction:
@@ -34,6 +36,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
+          // 3
           nameCompany: "Phòng khám Mediplus",
           avatar: "../assets/images/benhvien/mediplus.png",
           introduction:
@@ -46,6 +49,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
+          // 4
           nameCompany: "Bệnh viện xanh phôn",
           avatar: "../assets/images/benhvien/xanhphon.png",
           introduction:
@@ -57,6 +61,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
+          // 5
           nameCompany: "Phòng khám Y Tế Công Cộng",
           avatar: "../assets/images/benhvien/congcong.png",
           introduction:
@@ -68,6 +73,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
+          // 6
           nameCompany: "Bệnh viện Đồng Tâm",
           avatar: "../assets/images/benhvien/congcong.png",
           introduction: ".....",
@@ -78,6 +84,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
+          // 7
           nameCompany: "Phòng khám Dr Allen",
           avatar: "../assets/images/benhvien/drallen.png",
           introduction:
@@ -90,6 +97,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
+          // 8
           nameCompany: "Bệnh viện đa khoa Thanh Hóa",
           avatar: "../assets/images/benhvien/dkth.png",
           introduction:
@@ -101,6 +109,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
+          // 9
           nameCompany: "Bệnh viện đại học Y",
           avatar: "../assets/images/benhvien/daihocy.png",
           introduction:
@@ -112,6 +121,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
+          // 10
           nameCompany: "Bệnh viện Bạch Mai",
           avatar: "../assets/images/benhvien/daihocy.png",
           introduction:
@@ -123,6 +133,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
+          // 11
           nameCompany: "Bệnh viện Phổi",
           avatar: "../assets/images/benhvien/daihocy.png",
           introduction:
@@ -134,6 +145,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
+          // 12
           nameCompany: "Bệnh viện Quân y 110",
           avatar: "../assets/images/benhvien/daihocy.png",
           introduction:
@@ -146,6 +158,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
+          // 13
           nameCompany: "Phòng khám VietLife",
           avatar: "../assets/images/benhvien/daihocy.png",
           introduction:
@@ -157,6 +170,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
+          // 14
           nameCompany: "Phòng khám MYREHAB",
           avatar: "../assets/images/benhvien/daihocy.png",
           introduction:
@@ -169,6 +183,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
+          // 15
           nameCompany: "Phòng khám Chân Trời Mới",
           avatar: "../assets/images/benhvien/daihocy.png",
           introduction:
@@ -180,6 +195,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
+          // 16
           nameCompany: "Bệnh viện Việt Mỹ",
           avatar: "../assets/images/benhvien/daihocy.png",
           introduction:
@@ -191,6 +207,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
+          // 17
           nameCompany: "Bệnh Viện Đa khoa Thái Hòa",
           avatar: "../assets/images/benhvien/daihocy.png",
           introduction: "",
@@ -201,6 +218,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
+          // 18
           nameCompany: "Bệnh Viện Việt Nhật",
           avatar: "../assets/images/benhvien/daihocy.png",
           introduction: "",
@@ -211,6 +229,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
+          // 19
           nameCompany: "Ung Bướu Khánh Hòa",
           avatar: "../assets/images/benhvien/daihocy.png",
           introduction: "",
@@ -221,6 +240,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
+          // 20
           nameCompany: "Bệnh viện phụ sản Thiện An",
           avatar: "../assets/images/benhvien/daihocy.png",
           introduction: "",
@@ -231,6 +251,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
+          // 21
           nameCompany: "Trung Tâm Tim Mạch Viện E",
           avatar: "../assets/images/benhvien/daihocy.png",
           introduction:
