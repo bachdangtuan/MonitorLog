@@ -14,8 +14,10 @@ const createVirtualMachine = async (req, res) => {
         ipaddress,
         nameVirtualMachine,
         cpu,
+        usedram,
         ram,
         disk,
+        diskused,
         belongtoPhysicalMachine,
 
     } = req.body
@@ -25,7 +27,9 @@ const createVirtualMachine = async (req, res) => {
             nameVirtualMachine,
             cpu,
             ram,
+            usedram,
             disk,
+            diskused,
             belongtoPhysicalMachine,
             createdAt: moment().tz('Asia/Ho_Chi_Minh').format('YYYY-MM-DDTHH:mm:ss.SSS[Z]'),
         })
