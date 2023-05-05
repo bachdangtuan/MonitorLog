@@ -74,12 +74,13 @@ module.exports = {
         },
         {
           // 6
-          nameCompany: "Bệnh viện Đồng Tâm",
-          avatar: "../assets/images/benhvien/congcong.png",
-          introduction: ".....",
-          email: "......",
-          phoneNumber: "......",
-          address: ".....",
+          nameCompany: "Trung Tâm Tim Mạch Viện E",
+          avatar: "../assets/images/benhvien/daihocy.png",
+          introduction:
+            "Trung tâm Tim mạch – Bệnh viện E được thành lập ngày 26/8/2009 theo Quyết định 3099/QĐ-BYT với nhiệm vụ điều trị các bệnh lý tim mạch và lồng ngực. Ca mổ tim hở đầu tiên được thực hiện vào ngày 24/2/2010 đã đánh dấu bước phát triển của Trung tâm, từ đó đến nay Trung tâm Tim mạch đã gặt hái được nhiều thành công, trở thành điểm sáng của ngành y tế và được đông đảo nhân dân gần xa tin tưởng.",
+          email: "contact@phusanthienan.com",
+          phoneNumber: "(+84) 83754 3832",
+          address: "89 Trần Cung, Nghĩa Tân, Cầu Giấy, Hà Nội",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -252,13 +253,12 @@ module.exports = {
         },
         {
           // 21
-          nameCompany: "Trung Tâm Tim Mạch Viện E",
+          nameCompany: "Phòng khám YKHN",
           avatar: "../assets/images/benhvien/daihocy.png",
-          introduction:
-            "Trung tâm Tim mạch – Bệnh viện E được thành lập ngày 26/8/2009 theo Quyết định 3099/QĐ-BYT với nhiệm vụ điều trị các bệnh lý tim mạch và lồng ngực. Ca mổ tim hở đầu tiên được thực hiện vào ngày 24/2/2010 đã đánh dấu bước phát triển của Trung tâm, từ đó đến nay Trung tâm Tim mạch đã gặt hái được nhiều thành công, trở thành điểm sáng của ngành y tế và được đông đảo nhân dân gần xa tin tưởng.",
+          introduction: "",
           email: "contact@phusanthienan.com",
-          phoneNumber: "(+84) 83754 3832",
-          address: "89 Trần Cung, Nghĩa Tân, Cầu Giấy, Hà Nội",
+          phoneNumber: "1900-633-081",
+          address: "27 Ngõ 603 Lạc Long Quân, Tây Hồ, Hà Nội",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -274,6 +274,6 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-    await queryInterface.bulkDelete("users", null, {});
+    await queryInterface.bulkDelete("Projects", null, {});
   },
 };
