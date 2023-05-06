@@ -124,7 +124,7 @@ module.exports = {
         {
           // 10
           nameCompany: "Bệnh viện Bạch Mai",
-          avatar: "../assets/images/benhvien/daihocy.png",
+          avatar: "../assets/images/benhvien/bachmai.png",
           introduction:
             "Bệnh viện Bạch Mai là bệnh viện đầu tiên trong nước được nhận danh hiệu đặc biệt. Hiện tại bệnh viện Bạch Mai có 1.400 giường bệnh, tất cả trưởng khoa, giám đốc các trung tâm đều có trình độ sau đại học. Tỉ lệ tử vong của bệnh nhân chỉ từ 0,8-0,9% và tỉ lệ sử dụng giường bệnh đạt 153% (so với tiêu chí đề ra là 85%).",
           email: ".......",
@@ -136,7 +136,7 @@ module.exports = {
         {
           // 11
           nameCompany: "Bệnh viện Phổi",
-          avatar: "../assets/images/benhvien/daihocy.png",
+          avatar: "../assets/images/benhvien/phoi.png",
           introduction:
             "Bệnh viện Bạch Mai là bệnh viện đầu tiên trong nước được nhận danh hiệu đặc biệt. Hiện tại bệnh viện Bạch Mai có 1.400 giường bệnh, tất cả trưởng khoa, giám đốc các trung tâm đều có trình độ sau đại học. Tỉ lệ tử vong của bệnh nhân chỉ từ 0,8-0,9% và tỉ lệ sử dụng giường bệnh đạt 153% (so với tiêu chí đề ra là 85%).",
           email: "bvptw@bvptw.org",
@@ -148,7 +148,7 @@ module.exports = {
         {
           // 12
           nameCompany: "Bệnh viện Quân y 110",
-          avatar: "../assets/images/benhvien/daihocy.png",
+          avatar: "../assets/images/benhvien/qy110.png",
           introduction:
             "Bệnh viện Quân y 110 thuộc Cục Hậu cần, Quân khu 1 là Bệnh viện đa khoa Hạng 1. Có nhiệm vụ chính trị trung tâm là khám bệnh, thu dung, cấp cứu, điều trị cho các đơn vị quân đội trên tuyến, cơ quan, đơn vị, công ty và nhân dân trên địa bàn đơn vị đóng quân, sẵn sàng thực hiện các nhiệm vụ khác khi được cấp trên giao.",
           email: "cntt.v110@gmail.com",
@@ -173,7 +173,7 @@ module.exports = {
         {
           // 14
           nameCompany: "Phòng khám MYREHAB",
-          avatar: "../assets/images/benhvien/daihocy.png",
+          avatar: "../assets/images/benhvien/myrehab.png",
           introduction:
             "Trung tâm MYREHAB mang tiêu chuẩn quốc tế với những trang thiết bị hiện đại nhất từ Âu – Mỹ, ứng dụng công nghệ vào các phương pháp điều trị, giúp cá nhân hóa liệu trình trị liệu, thúc đẩy cá nhân duy trì luyện tập phục hồi chức năng và cải thiện sức khỏe. ",
           email: "info@myrehab.vn",
@@ -186,7 +186,7 @@ module.exports = {
         {
           // 15
           nameCompany: "Phòng khám Chân Trời Mới",
-          avatar: "../assets/images/benhvien/daihocy.png",
+          avatar: "../assets/images/benhvien/chantroimoi.png",
           introduction:
             "Công ty TNHH Chăm sóc giảm nhẹ Chân trời mới tiền thân là một Trung tâm chăm sóc giảm nhẹ cho Người cao tuổi, tọa lạc cạnh khu đô thị Ecopark từ năm 2016",
           email: "...",
@@ -198,7 +198,7 @@ module.exports = {
         {
           // 16
           nameCompany: "Bệnh viện Việt Mỹ",
-          avatar: "../assets/images/benhvien/daihocy.png",
+          avatar: "../assets/images/benhvien/vietmy.png",
           introduction:
             "Bệnh Viện Thẩm Mỹ Việt Mỹ (Giám đốc Bác sĩ Chiêm Quốc Thái) là một trong những bệnh viện thẩm mỹ - thẩm mỹ viện lớn và uy tín tại TP.HCM với diện tích 3000m2. Tọa lạc ngay trung tâm Q.1 Tp.HCM thiết kế theo tiêu chuẩn Bệnh Viện Thẩm Mỹ Quốc Tế",
           email: " tuvan@benhvienvietmy.com",
@@ -210,7 +210,7 @@ module.exports = {
         {
           // 17
           nameCompany: "Bệnh Viện Đa khoa Thái Hòa",
-          avatar: "../assets/images/benhvien/daihocy.png",
+          avatar: "../assets/images/benhvien/default.png",
           introduction: "",
           email: "...",
           phoneNumber: "",
@@ -221,7 +221,7 @@ module.exports = {
         {
           // 18
           nameCompany: "Bệnh Viện Việt Nhật",
-          avatar: "../assets/images/benhvien/daihocy.png",
+          avatar: "../assets/images/benhvien/default.png",
           introduction: "",
           email: "...",
           phoneNumber: "",
@@ -232,7 +232,7 @@ module.exports = {
         {
           // 19
           nameCompany: "Ung Bướu Khánh Hòa",
-          avatar: "../assets/images/benhvien/daihocy.png",
+          avatar: "../assets/images/benhvien/default.png",
           introduction: "",
           email: "...",
           phoneNumber: "",
@@ -243,7 +243,7 @@ module.exports = {
         {
           // 20
           nameCompany: "Bệnh viện phụ sản Thiện An",
-          avatar: "../assets/images/benhvien/daihocy.png",
+          avatar: "../assets/images/benhvien/default.png",
           introduction: "",
           email: "contact@phusanthienan.com",
           phoneNumber: "1900-633-081",
@@ -254,7 +254,7 @@ module.exports = {
         {
           // 21
           nameCompany: "Phòng khám YKHN",
-          avatar: "../assets/images/benhvien/daihocy.png",
+          avatar: "../assets/images/benhvien/default.png",
           introduction: "",
           email: "contact@phusanthienan.com",
           phoneNumber: "1900-633-081",
