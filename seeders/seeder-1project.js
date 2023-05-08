@@ -262,6 +262,17 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
         },
+        {
+          // 22
+          nameCompany: "Bệnh viện Nhi Đồng TPHCM",
+          avatar: "../assets/images/benhvien/ndtp.png",
+          introduction: "Là Bệnh viện CÔNG LẬP chăm sóc sức khỏe toàn diện cho trẻ em dựa trên giá trị cốt lõi là TẬN TÂM- NĂNG ĐỘNG- HỢP TÁC- CÔNG BẰNG.",
+          email: "bv.nhidong@tphcm.gov.vn  ",
+          phoneNumber: "19001217",
+          address: "15 Đ. Võ Trần Chí, Tân Kiên, Bình Chánh, Thành phố Hồ Chí Minh",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
       ],
       {}
     );
