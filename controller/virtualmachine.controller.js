@@ -50,7 +50,7 @@ const getDetailNameVirtualMachine = async (req, res) => {
     const name = req.query.name;
 
     optionQueryDB = {
-      where: { nameVirtualMachine: name }, // Add the WHERE condition here
+      where: { nameVirtualMachine: name },
       limit: limit,
       offset: start,
       attributes: { exclude: ["updatedAt"] },
