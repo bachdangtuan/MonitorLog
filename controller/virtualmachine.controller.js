@@ -61,7 +61,10 @@ const getDetailNameVirtualMachine = async (req, res) => {
       optionQueryDB
     );
     res.status(200).send({
-      listInfoDetailVM,
+      thisPage: page,
+      limit: limit,
+      data: listInfoDetailVM,
+      totalItems: count,
       message: "Lấy thành công",
     });
   } catch (e) {
