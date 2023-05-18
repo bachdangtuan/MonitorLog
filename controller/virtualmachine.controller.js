@@ -47,7 +47,9 @@ const getDetailNameVirtualMachine = async (req, res) => {
     let limit = parseInt(req.query.limit) || 6;
     let page = parseInt(req.query.page) || 1;
     let start = (page - 1) * limit;
-    const name = req.query.name;
+    const name = req.query.nameVirtual;
+
+    console.log("name", name);
 
     optionQueryDB = {
       where: { nameVirtualMachine: name },
@@ -55,11 +57,9 @@ const getDetailNameVirtualMachine = async (req, res) => {
       offset: start,
       attributes: { exclude: ["updatedAt"] },
     };
-
     const listInfoDetailVM = await VirtualMachines.findAndCountAll(
       optionQueryDB
     );
-
     res.status(200).send({
       listInfoDetailVM,
       message: "Lấy thành công",
