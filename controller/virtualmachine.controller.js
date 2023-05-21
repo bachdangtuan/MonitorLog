@@ -60,11 +60,11 @@ const getDetailNameVirtualMachine = async (req, res) => {
     const listInfoDetailVM = await VirtualMachines.findAndCountAll(
       optionQueryDB
     );
+    console.log('listInfoDetailVM',listInfoDetailVM);
     res.status(200).send({
       thisPage: page,
       limit: limit,
-      data: listInfoDetailVM,
-      totalItems: count,
+      listInfoDetailVM,
       message: "Lấy thành công",
     });
   } catch (e) {
