@@ -56,6 +56,7 @@ const getDetailNameVirtualMachine = async (req, res) => {
       limit: limit,
       offset: start,
       attributes: { exclude: ["updatedAt"] },
+      order: [['updatedAt', 'DESC']]
     };
     const listInfoDetailVM = await VirtualMachines.findAndCountAll(
       optionQueryDB
