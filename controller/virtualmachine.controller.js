@@ -44,7 +44,7 @@ const createVirtualMachine = async (req, res) => {
 
 const getDetailNameVirtualMachine = async (req, res) => {
   try {
-    let limit = parseInt(req.query.limit) || 6;
+    let limit = parseInt(req.query.limit) || 8;
     let page = parseInt(req.query.page) || 1;
     let start = (page - 1) * limit;
     const name = req.query.nameVirtual;
