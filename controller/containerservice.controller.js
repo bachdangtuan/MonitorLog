@@ -36,6 +36,40 @@ const createContainerService = async (req, res) => {
 
 }
 
+const getDetailContainer = async (req, res) => {
+    try {
+      let limit = parseInt(req.query.limit) || 8;
+      let page = parseInt(req.query.page) || 1;
+      let start = (page - 1) * limit;
+      const id = req.query.container;
+  
+      console.log("id", id);
+  
+      optionQueryDB = {
+        where: { belongtoVirtualMachine: id },
+        limit: limit,
+        offset: start,
+        attributes: { exclude: ["updatedAt"] },
+        order: [['updatedAt', 'DESC']]
+      };
+      const listServiceContainers = await ServiceContainers.findAndCountAll(
+        optionQueryDB
+      );
+      console.log('listInfoDetailVM',listServiceContainers);
+      res.status(200).send({
+        thisPage: page,
+        limit: limit,
+        listServiceContainers,
+        message: "Lấy thành công",
+      });
+    } catch (e) {
+      res.send(e);
+    }
+  };
+
+
+
 module.exports = {
-    createContainerService
+    createContainerService,
+    getDetailContainer
 };
