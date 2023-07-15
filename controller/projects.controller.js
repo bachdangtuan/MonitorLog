@@ -1,36 +1,36 @@
-const {Projects, PhysicalMachines, VirtualMachines, ServiceContainers} = require("../models");
+const {projects, physicalmachines, virtualmachines, servicecontainers} = require("../models");
 
 // Get All project
 
 let optionQueryDB = {
-    include: [
+  include: [
+    {
+      model: physicalmachines,
+      as: "listPhysicalMachine",
+      attributes: { exclude: ["createdAt", "updatedAt"] },
+      include: [
         {
-            model: PhysicalMachines,
-            as: "listPhysicalMachine",
-            attributes: {exclude: ["createdAt", "updatedAt"]},
-            include: [
-                {
-                    model: VirtualMachines,
-                    as: "listVirtualMachine",
-                    attributes: {exclude: ["createdAt", "updatedAt"]},
-                    // include: [
-                    //     {
-                    //         model: ServiceContainers,
-                    //         as: "belongVirtualMachine",
-                    //         attributes: {exclude: ["createdAt", "updatedAt"]},
-                    //
-                    //     },
-                    // ],
-                },
-            ],
+          model: virtualmachines,
+          as: "listVirtualMachine",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+          // include: [
+          //     {
+          //         model: ServiceContainers,
+          //         as: "belongVirtualMachine",
+          //         attributes: {exclude: ["createdAt", "updatedAt"]},
+          //
+          //     },
+          // ],
         },
-    ],
-    attributes: {exclude: ["createdAt", "updatedAt"]},
+      ],
+    },
+  ],
+  attributes: { exclude: ["createdAt", "updatedAt"] },
 };
 const getAllProject = async (req, res) => {
     // console.log(Projects);
     try {
-        const projectsList = await Projects.findAll(optionQueryDB);
+        const projectsList = await projects.findAll(optionQueryDB);
 
         console.log(projectsList);
         res.status(200).send(projectsList);
@@ -46,7 +46,7 @@ const getDetailProject = async (req, res) => {
     optionQueryDB.where = {id}
 
     try {
-        const projectsList = await Projects.findAll(optionQueryDB);
+        const projectsList = await projects.findAll(optionQueryDB);
 
         console.log(projectsList);
         res.status(200).send(projectsList);

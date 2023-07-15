@@ -2,7 +2,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
     async up(queryInterface, Sequelize) {
-        await queryInterface.createTable("VirtualMachines", {
+        await queryInterface.createTable("virtualmachines", {
             id: {
                 allowNull: false,
                 autoIncrement: true,
@@ -33,7 +33,7 @@ module.exports = {
             belongtoPhysicalMachine: {
                 type: Sequelize.INTEGER,
                 references: {
-                    model: 'PhysicalMachines',
+                    model: 'physicalmachines',
                     key: "id",
                 }
             },
@@ -48,6 +48,6 @@ module.exports = {
         });
     },
     async down(queryInterface, Sequelize) {
-        await queryInterface.dropTable("VirtualMachines");
+        await queryInterface.dropTable("virtualmachines");
     },
 };

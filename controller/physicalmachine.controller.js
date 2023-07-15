@@ -1,9 +1,9 @@
-const { PhysicalMachines, VirtualMachines } = require("../models");
+const { physicalmachines, virtualmachines } = require("../models");
 
 let optionQueryDB = {
   include: [
     {
-      model: VirtualMachines,
+      model: virtualmachines,
       as: "listVirtualMachine",
       attributes: { exclude: ["createdAt", "updatedAt"] },
       // include: [
@@ -24,7 +24,7 @@ const getDetailPhysicalMachine = async (req, res) => {
   console.log(id);
   optionQueryDB.where = { id };
   try {
-    const detailPhysicalMachine = await PhysicalMachines.findAll(optionQueryDB);
+    const detailPhysicalMachine = await physicalmachines.findAll(optionQueryDB);
 
     console.log(detailPhysicalMachine);
     res.status(200).send(detailPhysicalMachine);

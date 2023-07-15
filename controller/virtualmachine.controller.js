@@ -1,4 +1,4 @@
-const { VirtualMachines } = require("../models");
+const { virtualmachines } = require("../models");
 const moment = require("moment");
 
 // Thiết lập múi giờ thành UTC+7
@@ -23,7 +23,7 @@ const createVirtualMachine = async (req, res) => {
     belongtoPhysicalMachine,
   } = req.body;
   try {
-    const newVirtualMachine = await VirtualMachines.create({
+    const newVirtualMachine = await virtualmachines.create({
       ipaddress,
       nameVirtualMachine,
       cpu,
@@ -58,7 +58,7 @@ const getDetailNameVirtualMachine = async (req, res) => {
       attributes: { exclude: ["updatedAt"] },
       order: [['updatedAt', 'DESC']]
     };
-    const listInfoDetailVM = await VirtualMachines.findAndCountAll(
+    const listInfoDetailVM = await virtualmachines.findAndCountAll(
       optionQueryDB
     );
     console.log('listInfoDetailVM',listInfoDetailVM);

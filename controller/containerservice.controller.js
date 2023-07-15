@@ -1,4 +1,4 @@
-const {ServiceContainers} = require("../models");
+const {servicecontainers} = require("../models");
 const moment = require('moment');
 
 // Thiết lập múi giờ thành UTC+7
@@ -20,15 +20,17 @@ const createContainerService = async (req, res) => {
 
     } = req.body
     try {
-        const newContainerService = await ServiceContainers.create({
-            ipaddress,
-            nameServiceContainer,
-            cpu,
-            ram,
-            disk,
-            belongtoVirtualMachine,
-            createdAt: moment().tz('Asia/Ho_Chi_Minh').format('YYYY-MM-DDTHH:mm:ss.SSS[Z]'),
-        })
+        const newContainerService = await servicecontainers.create({
+          ipaddress,
+          nameServiceContainer,
+          cpu,
+          ram,
+          disk,
+          belongtoVirtualMachine,
+          createdAt: moment()
+            .tz("Asia/Ho_Chi_Minh")
+            .format("YYYY-MM-DDTHH:mm:ss.SSS[Z]"),
+        });
         res.status(200).send(newContainerService)
     } catch (err) {
         console.log(err);
@@ -52,7 +54,7 @@ const getDetailContainer = async (req, res) => {
         attributes: { exclude: ["updatedAt"] },
         order: [['updatedAt', 'DESC']]
       };
-      const listServiceContainers = await ServiceContainers.findAndCountAll(
+      const listServiceContainers = await servicecontainers.findAndCountAll(
         optionQueryDB
       );
       console.log('listInfoDetailVM',listServiceContainers);
